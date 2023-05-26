@@ -8,20 +8,20 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
+    categoryName: "sneakers",
     description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+      "Style meets comfort in our Sneakers Section. Handpicked for unparalleled support and breathability, express your unique personality with every step.",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
+    categoryName: "running",
     description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+      "Unleash your running potential with our high-performance Running Collection. Meticulously curated for optimal support, breathability, and personalized performance enhancement.",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
+    categoryName: "casual",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "Level up your streetwear game with effortlessly fashionable and cutting-edge styles created for unsurpassed comfort and confidence, enjoy the essence of urban style.",
   },
 ];
