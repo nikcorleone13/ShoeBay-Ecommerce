@@ -8,6 +8,8 @@ import { Single_Product } from '../pages/Single_Product/Single_Product';
 import { Cart } from '../pages/Cart/Cart';
 import { Wishlist } from '../pages/Wishlist/Wishlist';
 import Mockman from "mockman-js";
+import { Undefined } from '../pages/Undefined/Undefined';
+import { Header } from '../components/navbar/Navbar';
 
 export const All_Routes = () => {
     return (
@@ -20,6 +22,7 @@ export const All_Routes = () => {
                 <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="*" element={<Undefined />} />
                 <Route path='/mockman' element={<Mockman />} />
             </Routes>
         </div>

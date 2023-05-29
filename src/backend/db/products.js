@@ -32,7 +32,6 @@ export const products = [
     { _id: uuid(), img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ff2e419f1eda4ebab23faad6009a3a9e_9366/SUPERSTAR_SHOES_White_EG4958_04_standard.jpg' },
     { _id: uuid(), img: 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/31cf91f6e16c4f0aa11caad6009a4590_9366/SUPERSTAR_SHOES_White_EG4958_05_standard.jpg' },
     {
-      _id: uuid(),
       _id: uuid(), img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a540f36ec2c446f198c0aad6009a620e_9366/SUPERSTAR_SHOES_White_EG4958_43_detail.jpg'
     }]
   },

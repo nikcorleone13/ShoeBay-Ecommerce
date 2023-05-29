@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --font-family:'Nunito', sans-serif;
+    --background-color-primary:#061621;
+    --background-color-secondary:#001e2b;
+    
+    --green-pop:#00ed64;
+    --green-mid:#13aa52;
+    --green-dark:#00684a;
+
+    --white-text:#f5f5f5;
+    --dark-text:#1d1c1c;
+    --grey-text:#b8c4c2;
+    --white-text-extreme:#ffffff;
+
+    text-decoration: none;
+    color: inherit;
+
+    --font-size-lg:2.5rem;
+    --font-size-md:1.8rem;
+    --font-size-sm:1.2rem;
+}
+:root{
+    font-family: var(--font-family);
+}
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: var(--background-color-primary);
+    color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    
+}
+.terms{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* logo */
+.terms .logo{
+    font-size: var(--font-size-sm);
+    text-transform: capitalize;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.terms p{
+    font-size: 12px;
+}
+.terms .para-1{
+    margin-top: 10px;
+margin-bottom: 10px;
+}
+.terms .para-2{
+    font-size: 10px;
+}
+
+/* socials */
+.socials{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}

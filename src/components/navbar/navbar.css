@@ -1,0 +1,261 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --font-family:'Nunito', sans-serif;
+    --background-color-primary:#061621;
+    --background-color-secondary:#001e2b;
+    
+    --green-pop:#00ed64;
+    --green-mid:#13aa52;
+    --green-dark:#00684a;
+
+    --white-text:#f5f6f7;
+    --dark-text:#1d1c1c;
+    --grey-text:#b8c4c2;
+
+    text-decoration: none;
+    color: inherit;
+
+    --font-size-lg:2.5rem;
+    --font-size-md:1.8rem;
+    --font-size-sm:1.2rem;
+}
+:root{
+    font-family: var(--font-family);
+} */
+nav{
+    background-color: var(--background-color-primary);
+    color: var(--white-text);
+    font-size: var(--font-size-md);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+/* nav logo */
+nav .logo{
+    /* background-color: red; */
+    font-size: var(--font-size-lg);
+    text-transform: capitalize;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+/* search bar */
+nav .search-bar {
+    display: flex;
+    justify-content: center;
+    color: black;
+    flex: 30%;
+    align-items: center;
+    overflow: hidden;
+  }
+  nav input {
+    color: var(--dark-text);
+    width: 17rem;
+    height: 2rem;
+    font-size: 20px;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+  }
+  nav button {
+    border: none;
+    height: 2rem;
+    width: 70px;
+    font-size: 20px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+  }
+  nav button:hover{
+    color: #00684a;
+  }
+  
+
+/* navlinks */
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+nav ul li{
+    margin: 0 1rem;
+    padding: 5px 0;
+}
+nav ul li:hover{
+    color: var(--green-pop);
+    transition: .2s ease-in-out;
+}
+
+/* menu */
+.menu-button{
+    display: none;
+}
+
+/* #hidden{
+display: flex;
+} */
+
+@media only screen and (max-width:1300px){
+
+    nav .logo{
+        /* background-color: red; */
+        font-size: var(--font-size-md);
+    }
+    nav input{
+        width: 250px;
+        height: 1.5rem; 
+        border: none;
+        font-size: 13px;
+        padding:  .5rem .5rem ;
+        text: black;
+        border-radius: 7px 0 0 7px;
+     }
+     nav button{
+       height: 1.5rem;
+       width: 40px;
+       border-radius: 0 7px 7px 0;
+       font-size: 15px;  
+     }
+     nav ul li{
+        font-size: var(--font-size-sm);
+    }
+}
+
+
+@media only screen and (max-width:1000px)
+{
+    /* logo */
+    nav .logo
+    {
+        font-size: var(--font-size-sm);
+        left: 0;
+        margin: auto;
+    }
+
+    /* search bar */
+    nav input
+    {
+        width: 170px;
+        height: 1.5rem; 
+        border: none;
+        font-size: 12px;
+        padding:  .1rem .6rem ;
+     }
+    nav button
+    {
+       height: 1.5rem; 
+       width: 70px;
+       font-size: 13px;  
+     }
+
+     /* links */
+    nav ul
+    {
+        list-style: none;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    nav ul li
+    {
+        font-size: 15px;
+        margin: 0 1rem;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width:850px){
+    /* logo */
+    nav .logo{
+        left: 0;
+        margin: auto;
+        font-size: 1.2rem;
+    }
+
+    /* search bar */
+    nav input
+    {
+        width: 120px;
+        height: 1.5rem; 
+        border: none;
+        font-size: 12px;
+        padding:  .1rem .6rem ;
+     }
+    nav button
+    {
+       height: 1.5rem; 
+       width: 30px;
+       font-size: 13px;  
+     }
+
+     /* links */
+    nav ul
+    {
+        list-style: none;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    nav ul li
+    {
+        font-size: 15px;
+        margin: 0 1rem;
+        padding: 10px 0;
+    }
+}
+
+
+/* hamburger menu working */
+
+@media only screen and (min-width: 300px) and (max-width: 700px)
+{
+
+    nav{
+        display: grid;
+        grid-template-columns: 20% 50%;
+    }
+    nav .logo{
+        /* font-size: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        left: 0; */
+        /* margin: auto; */
+        display: flex;
+        justify-content: flex-start;
+        margin-left: -20px;
+        
+    }
+
+    /* search bar */
+    nav .search-bar{
+        display: none;
+    }
+
+
+    /* links */
+         nav ul
+         {
+             margin-right: -20px;
+             list-style: none;
+             display: flex;
+             justify-content: end;
+             align-items: center;
+         }
+         nav ul li
+         {
+             font-size: 12px;
+             margin: 0 .4rem;
+             padding: 7px 0;
+         }
+}
+     
+
