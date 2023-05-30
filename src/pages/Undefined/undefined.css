@@ -22,28 +22,49 @@
     --font-size-lg:2.5rem;
     --font-size-md:1.8rem;
     --font-size-sm:1.2rem;
+    
 }
 :root{
     font-family: var(--font-family);
-}
-.btn-primary{
-    height: 15%;
-    width: 100%;
-    color: var(--green-mid);
-    background-color: transparent;
-    font-size: 2rem;
-    font-weight: 500;
-    padding: 1rem 2rem;
-    margin: auto;
-    cursor: pointer;
+    overflow-x: hidden;
 
-    border: 2px solid var(--green-mid);
-    border-radius: 15px ;
 }
-.btn-primary:hover{
-    cursor: pointer;
-    color: var(--green-pop);
+.container{
     background-color: var(--background-color-secondary);
+    color: var(--green-pop);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-box{
+    font-size: 20px;
+    /* border: 2px solid white; */
+    width: 50%;
+    height: 50%;
+}
+.error-box h2{
+    color: var(--green-pop);
+    padding: 1rem;
+}
+.error-box p{
+    padding: 1rem;
+
+}
+.error-box .button-nav{
+    padding: 1rem;
+}
+.error-box .button-nav button{
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: var(--font-size-md);
     border: 2px solid var(--green-pop);
-    transition: .2s ease-in-out;
+    background-color: var(--background-color-primary);
+    padding: 15px;
+}
+button:hover{
+    color: var(--background-color-primary);
+    background-color: var(--green-pop);
 }

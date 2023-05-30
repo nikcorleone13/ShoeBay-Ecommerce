@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header } from "../../components/navbar/Navbar.js"
+import { Link } from 'react-router-dom'
 
 import "./Home_Page.css"
 import { ButtonPrimary } from '../../components/buttons/primary/Button_Primary.js'
@@ -26,18 +27,26 @@ export const Home = () => {
             </section>
             <section className='categories-section'>
                 <div className='category-image' id='category-1'>
-                    <ButtonPrimary text="SNEAKERS" value="sneakers" />
+                    <Link className='link-button'>
+                        <ButtonPrimary text="SNEAKERS" value="sneakers" />
+                    </Link>
                 </div>
             </section>
 
             <section className='categories-section'>
                 <div className='category-image' id='category-2'>
-                    <ButtonPrimary text="RUNNING" value="RUNNING" />                </div>
+                    <Link className='link-button'>
+                        <ButtonPrimary text="RUNNING" value="RUNNING" />
+                    </Link>
+                </div>
             </section>
 
             <section className='categories-section'>
                 <div className='category-image' id='category-3'>
-                    <ButtonPrimary text="CASUAL" value="casual" />
+                    <Link className='link-button'>
+                        <ButtonPrimary text="CASUAL" value="casual" />
+                    </Link>
+
                 </div>
             </section>
             <Footer />

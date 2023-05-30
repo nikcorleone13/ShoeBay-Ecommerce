@@ -27,6 +27,7 @@
     font-family: var(--font-family);
 }
 .footer{
+    margin-top: 2rem;
     height: 200px;
     width: 100%;
     background-color: var(--background-color-primary);
@@ -71,4 +72,107 @@ margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     font-size: 20px;
+}
+
+.icons:hover{
+    color: var(--green-pop);
+}
+
+
+@media only screen and (min-width: 700px) and (max-width: 1300px){
+    .footer{
+        height: 200px;
+        width: 100%;
+        background-color: var(--background-color-primary);
+        color: var(--white-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        
+    }
+    .terms{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* logo */
+    .terms .logo{
+        font-size: var(--font-size-md);
+        text-transform: capitalize;
+        left: 0;
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+    
+    }
+    .terms p{
+        font-size: 12px;
+    }
+    .terms .para-1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    .terms .para-2{
+        font-size: 10px;
+    }
+    
+    /* socials */
+    .socials{
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .footer{
+        height: 300px;
+        width: 100%;
+        background-color: var(--background-color-primary);
+        color: var(--white-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        
+    }
+    .terms{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* logo */
+    .terms .logo{
+        font-size: var(--font-size-lg);
+        text-transform: capitalize;
+        left: 0;
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+    
+    }
+    .terms p{
+        font-size: 18px;
+    }
+    .terms .para-1{
+    margin-top: 15px;
+    margin-bottom: 13px;
+    }
+    .terms .para-2{
+        font-size: 15px;
+    }
+    
+    /* socials */
+    .socials{
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 35px;
+    }
 }

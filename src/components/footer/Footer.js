@@ -21,19 +21,19 @@ export const Footer = () => {
                 <p className='para-2'>Privacy PolicyTerms of Use © 2022 ShoeStopper</p>
             </div>
             <div className='socials'>
-                <div className='icon-1'>
+                <div className=' icon-1'>
                     <Link to="https://www.linkedin.com/in/nikhil-kumar-4b484b198/" target='blank'>
-                        <FaLinkedin />
+                        <FaLinkedin className='icons' />
                     </Link>
                 </div>
-                <div className='icon-2'>
+                <div className='icons icon-2'>
                     <Link to="https://github.com/nikcorleone13" target='blank'>
-                        <FaGithub />
+                        <FaGithub className='icons' />
                     </Link>
                 </div>
-                <div className='icon-3'>
+                <div className='icons icon-3'>
                     <Link to="https://twitter.com/kinik_js" target='blank'>
-                        <FaTwitterSquare />
+                        <FaTwitterSquare className='icons' />
                     </Link>
                 </div>
             </div>

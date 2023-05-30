@@ -22,9 +22,15 @@
     --font-size-lg:2.5rem;
     --font-size-md:1.8rem;
     --font-size-sm:1.2rem;
+    
 }
 :root{
     font-family: var(--font-family);
+    overflow-x: hidden;
+
+}
+.link-button:hover{
+    color: #001e2b;
 }
 /* hero-section */
 
@@ -33,7 +39,7 @@
 @media only screen and (min-width: 300px) and (max-width: 700px)
 {
     .hero-section{
-        margin: 1.5rem 1rem 1rem;
+        margin-top: 1.2rem;
         height: 95vh;
         background: url(../../../public/images/hero-image/hero-img.jpg);
         background-size: cover;
@@ -43,16 +49,7 @@
         justify-content: center;
         align-items: center;
     }
-    .hero-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(50px); /* Adjust the blur intensity as desired */
-        z-index: -1;
-    }
+
     .hero-div{
         font-size: var(--font-size-md);
         display: flex;
@@ -123,6 +120,219 @@
         justify-content: center;
         align-items: center;
     }
+    .hidden-btn{
+        display: none;
+    }
+
+    /* individual-category boxes */
+    .categories-section #category-1{
+        background-image: url(../../../public/images/categories-image/sneakers/taylor-smith-aDZ5YIuedQg-unsplash.jpg);
+        opacity: .9;
+    }
+    .categories-section #category-2{
+        background-image: url(../../../public/images/categories-image/running/jakob-owens-A4579vLezz8-unsplash.jpg);
+        opacity: .9;
+    }
+    .categories-section #category-3{
+        background-image: url(../../../public/images/categories-image/casual/eugenivy_now-62GjTkG9_dM-unsplash.jpg);
+        opacity: .9;
+    }
+    
+    .categories-section:hover .hidden-btn{
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1300px)
+{
+    .hero-section{
+        left: 0;
+        height: 90vh;
+        width: 100%;
+        background-color: red;
+        background-image: url(../../../public/images/hero-image/hero-img.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .hero-div{
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30%;
+        width: 40%;
+        color: var(--white-text-extreme);
+
+
+        text-align:center;
+        font-weight: 500;
+
+        border:  5px solid var(--white-text);
+        padding: .5rem 1rem;
+    }
+    .hero-div p{
+        font-weight: 600;
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
+    /* categories-section */
+    .categories-head{
+        margin-top: 2rem;
+        height: 10vh;
+        background-color: var(--green-dark);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white-text);
+        font-size: var(--font-size-md);
+    }
+    .categories-head p{
+        margin: 2rem 1rem;
+    }
+    .categories-section{
+        background-color: var(--background-color-secondary);
+        margin-top: 2rem;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .category-image{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .category-image:hover{
+        transform: scale(1.1);
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hidden-btn{
+        display: none;
+    }
+
+    /* individual-category boxes */
+    .categories-section #category-1{
+        background-image: url(../../../public/images/categories-image/sneakers/taylor-smith-aDZ5YIuedQg-unsplash.jpg);
+        opacity: .9;
+    }
+    .categories-section #category-2{
+        background-image: url(../../../public/images/categories-image/running/jakob-owens-A4579vLezz8-unsplash.jpg);
+        opacity: .9;
+    }
+    .categories-section #category-3{
+        background-image: url(../../../public/images/categories-image/casual/eugenivy_now-62GjTkG9_dM-unsplash.jpg);
+        opacity: .9;
+    }
+    
+    .categories-section:hover .hidden-btn{
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width: 1300px)
+{
+    .hero-section{
+        /* margin: 1.5rem auto; */
+        height: 95vh;
+        /* width: 97vw; */
+        background-image: url(../../../public/images/hero-image/hero-img.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .hero-div{
+        font-size:var(--font-size-md
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+        max-width: 30%;
+        color: var(--white-text-extreme);
+
+
+        text-align:center;
+        font-weight: 500;
+
+        border:  5px solid var(--white-text);
+        padding: .5rem 1rem;
+    }
+    .hero-div p{
+        font-weight: 600;
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
+    /* categories-section */
+    .categories-head{
+        margin-top: 2rem;
+        height: 10vh;
+        background-color: var(--green-dark);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white-text);
+        font-size: var(--font-size-md);
+    }
+    .categories-head p{
+
+        margin: 2rem 1rem;
+    }
+    .categories-section{
+        background-color: var(--background-color-secondary);
+        margin-top: 2rem;
+        height: 70vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .category-image{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .hidden-btn{
         display: none;
     }
