@@ -2,24 +2,37 @@ import React, { useState } from 'react'
 import "./filterbar.css"
 
 export const FilterBar = () => {
-    const [rangeValue, setRangeValue] = useState(10000);
+    const [rangeValue, setRangeValue] = useState(100);
+    const [categoryBox, setCategoryBox] = useState({ category1: false, category2: false, category3: false });
+    const [ratingBox, setRatingBox] = useState({ above1: false, above2: false, above3: false, above4: false, });
+    const [sortBox, setSortBox] = useState({ lowTohigh: false, highToLow: false });
 
+    // handle rangebar input
     const handleRange = (e) => {
         setRangeValue(e.target.value);
+    }
+
+    // RESETTING ALL FILTERS
+    const resetFilters = () => {
+        setRangeValue(100);
+        setCategoryBox({ checkbox1: false, checkbox2: false, checkbox3: false });
+        setRatingBox({ above1: false, above2: false, above3: false, above4: false, });
+        setSortBox({ lowTohigh: false, highToLow: false });
     }
     return (
         <div className='filter-wrapper'>
 
             <div className='filter-container'>
 
-                <p className='reset-filters'>Reset Filters</p>
+                <p className='reset-filters' onClick={resetFilters}>Reset Filters</p>
 
                 <div className='range-filter' >
                     <p>Price</p>
                     <label>Rs: {rangeValue}</label>
                     <input type='range'
                         onChange={handleRange}
-                        min="0"
+                        value={rangeValue}
+                        min="100"
                         max="30000" />
                 </div>
 
@@ -33,9 +46,15 @@ export const FilterBar = () => {
                             <label>Casual</label>
                         </div>
                         <div className='checkbox-div'>
-                            <input type='checkbox' />
-                            <input type='checkbox' />
-                            <input type='checkbox' />
+
+                            <input type='checkbox' checked={categoryBox.category1} onChange={() => setCategoryBox({ ...categoryBox, category1: !categoryBox.category1 })}
+                            />
+
+                            <input type='checkbox' checked={categoryBox.category2} onChange={() => setCategoryBox({ ...categoryBox, category2: !categoryBox.category2 })}
+                            />
+
+                            <input type='checkbox' checked={categoryBox.category3} onChange={() => setCategoryBox({ ...categoryBox, category3: !categoryBox.category3 })}
+                            />
                         </div>
                     </div>
 
@@ -46,22 +65,27 @@ export const FilterBar = () => {
 
                     <div>
                         <label>1 star and above</label>
-                        <input type='checkbox' />
+                        <input type='checkbox' checked={ratingBox.above1}
+                            onChange={() => setRatingBox({ ...ratingBox, above1: !ratingBox.above1 })}
+                        />
                     </div>
 
                     <div>
                         <label>2 star and above</label>
-                        <input type='checkbox' />
+                        <input type='checkbox' checked={ratingBox.above2}
+                            onChange={() => setRatingBox({ ...ratingBox, above2: !ratingBox.above2 })} />
                     </div>
 
                     <div>
                         <label>3 star and above</label>
-                        <input type='checkbox' />
+                        <input type='checkbox' checked={ratingBox.above1}
+                            onChange={() => setRatingBox({ ...ratingBox, above3: !ratingBox.above3 })} />
                     </div>
 
                     <div>
                         <label>4 star and above</label>
-                        <input type='checkbox' />
+                        <input type='checkbox' checked={ratingBox.above4}
+                            onChange={() => setRatingBox({ ...ratingBox, above4: !ratingBox.above4 })} />
                     </div>
                 </div>
 
@@ -69,13 +93,17 @@ export const FilterBar = () => {
                     <p>Sort by Price</p>
 
                     <div>
-                        <label>High-to-Low</label>
-                        <input type='checkbox' />
-                    </div>
-
-                    <div>
                         <label>Low-to-High</label>
-                        <input type='checkbox' />
+                        <input type='checkbox' checked={sortBox.lowTohigh}
+                            onChange={() => setSortBox({ ...sortBox, lowTohigh: !sortBox.lowTohigh })}
+                        />
+
+                    </div>
+                    <label>High-to-Low</label>
+                    <input type='checkbox' checked={sortBox.highToLow}
+                        onChange={() => setSortBox({ ...sortBox, highToLow: !sortBox.highToLow })} />
+                    <div>
+
                     </div>
                 </div>
 

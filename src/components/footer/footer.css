@@ -27,7 +27,7 @@
     font-family: var(--font-family);
 }
 .footer{
-    margin-top: 2rem;
+    border-top: 2px solid var(--green-pop);
     height: 200px;
     width: 100%;
     background-color: var(--background-color-primary);

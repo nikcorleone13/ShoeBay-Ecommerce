@@ -28,9 +28,10 @@
 
 .filter-wrapper{
     position: sticky;
-    max-height:100vh;
-    min-width: 20%;
-    max-width: 20%;
+    max-height:100vw;
+    width: 100%;
+    /* min-width: 20%; */
+    /* max-width: 20%; */
     background-color: var(--background-color-secondary);
     color: var(--white-text);
     overflow-x: hidden;
@@ -42,9 +43,8 @@
     grid-template-rows:  1fr 1fr 1fr 1fr ;
     min-height: 100vh;
 }
-p{
-    font-size: 2rem;
-    font-weight: 600;
+.filter-wrapper p{
+    font-size: 1.2rem;
     margin-bottom: 10px;
 
 }
@@ -56,6 +56,8 @@ p{
     margin: 1rem;
     text-decoration: underline;
     color: var(--green-mid);
+    width: 100%;
+    height: 100%;
 }
 .filter-container .reset-filters:hover{
     color: var(--green-pop);

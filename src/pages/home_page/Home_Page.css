@@ -49,7 +49,16 @@
         justify-content: center;
         align-items: center;
     }
-
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(50px); /* Adjust the blur intensity as desired */
+        z-index: -1;
+    }
     .hero-div{
         font-size: var(--font-size-md);
         display: flex;
@@ -78,15 +87,16 @@
     .categories-head{
         margin-top: 5rem;
         height: 20vh;
-        background-color: var(--green-dark);
         display: flex;
         justify-content: center;
         align-items: center;
         color: var(--white-text);
-        font-size: var(--font-size-md);
+        background: rgb(0,104,74);
+        background: radial-gradient(circle, rgba(0,104,74,1) 0%, rgba(19,170,82,1) 52%, rgba(0,237,100,1) 100%); 
     }
-    .categories-head p{
+    .categories-head #category-para{
         margin: 2rem 1rem;
+        font-size: 15px;
     }
     .categories-section{
         background-color: var(--background-color-secondary);
@@ -100,17 +110,6 @@
         align-items: center;
     }
     .category-image{
-        height: 100%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .category-image:hover{
-        transform: scale(1.1);
         height: 100%;
         width: 100%;
         background-size: cover;
@@ -189,7 +188,8 @@
     .categories-head{
         margin-top: 2rem;
         height: 10vh;
-        background-color: var(--green-dark);
+        background: rgb(0,104,74);
+        background: radial-gradient(circle, rgba(0,104,74,1) 0%, rgba(19,170,82,1) 52%, rgba(0,237,100,1) 100%); 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -277,8 +277,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 20%;
-        max-width: 30%;
+        height: 30%;
+        max-width: 40%;
         color: var(--white-text-extreme);
 
 
@@ -289,6 +289,7 @@
         padding: .5rem 1rem;
     }
     .hero-div p{
+        font-size: var(--font-size-lg);
         font-weight: 600;
         display: inline-flex;
         justify-content: space-between;
@@ -300,7 +301,8 @@
     .categories-head{
         margin-top: 2rem;
         height: 10vh;
-        background-color: var(--green-dark);
+        background: rgb(0,104,74);
+        background: radial-gradient(circle, rgba(0,104,74,1) 0%, rgba(19,170,82,1) 52%, rgba(0,237,100,1) 100%);         
         display: flex;
         justify-content: center;
         align-items: center;
@@ -345,6 +347,8 @@
     .categories-section #category-2{
         background-image: url(../../../public/images/categories-image/running/jakob-owens-A4579vLezz8-unsplash.jpg);
         opacity: .9;
+        background-position: bottom;
+
     }
     .categories-section #category-3{
         background-image: url(../../../public/images/categories-image/casual/eugenivy_now-62GjTkG9_dM-unsplash.jpg);
