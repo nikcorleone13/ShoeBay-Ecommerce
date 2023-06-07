@@ -25,6 +25,7 @@ export const ProductCard = ({ item }) => {
                     <h1>{item.brand}</h1>
                     <h2>{item.name}</h2>
                     <h2>Rs {item.price}</h2>
+                    <p style={{ fontSize: "15px" }}>Rating: {item.rating}</p>
                 </div>
             </div>
         </Link>

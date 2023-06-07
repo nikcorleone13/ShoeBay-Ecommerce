@@ -9,6 +9,7 @@ import { Cart } from '../pages/Cart/Cart';
 import { Wishlist } from '../pages/Wishlist/Wishlist';
 import Mockman from "mockman-js";
 import { Undefined } from '../pages/Undefined/Undefined';
+import { ProdCategory } from '../pages/prod_category/ProdCategory';
 
 export const AllPaths = () => {
     return (
@@ -17,6 +18,7 @@ export const AllPaths = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/:productId" element={<Single_Product />} />
+                <Route path="/products/:category" element={<ProdCategory />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="/login" element={<Login />} />

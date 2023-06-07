@@ -37,9 +37,7 @@ export const Header = () => {
                         <NavLink to="/cart" className="navbar-link" style={getActiveStyle}>Cart
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/login" className="navbar-link" style={getActiveStyle}>Login</NavLink>
-                    </li>
+
                 </ul>
             </div>
             {/* <button className="menu-button"><GiHamburgerMenu /></button> */}

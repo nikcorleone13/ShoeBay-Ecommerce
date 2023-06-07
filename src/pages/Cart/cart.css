@@ -1,0 +1,22 @@
+.cart-total{
+    margin-top: 2rem;
+    font-size: 20px;
+    width: 30%;
+    left: 0;
+    margin: auto;
+}
+.cart-total button{
+    font-size: 20px;
+    margin: 1rem;
+    padding: 12px;
+    border-radius: 15px;
+    border: 2px solid #001e2b ;
+
+}
+.operation-buttons{
+    display: flex;
+    flex-direction: column;
+}
+.operation-buttons .op-buton{
+    padding: 10px
+}

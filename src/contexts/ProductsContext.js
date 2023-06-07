@@ -19,7 +19,7 @@ export const DataProvider = ({ children }) => {
             const products = res?.data.products;
             // console.log("data", products);
             dispatch({ type: 'INITIAL_API_DATA', payload: products })
-        } catch (error) {   
+        } catch (error) {
             console.log(error)
         }
     }

@@ -5,6 +5,7 @@ import { ProductsDataContext } from '../../contexts/ProductsContext';
 import './singleProduct.css';
 import { Header } from '../../components/navbar/Navbar';
 import { WishlistContext } from '../../contexts/WishlistContext';
+import { CartContext } from '../../contexts/CartContext';
 
 
 
@@ -12,6 +13,7 @@ export const Single_Product = () => {
     // contexts
     const { data } = useContext(ProductsDataContext);
     const { wishlistDispatch, wishlistData } = useContext(WishlistContext);
+    const { cartDispatch, cart } = useContext(CartContext);
 
     const { productId } = useParams();
     const [showItem, setShowItem] = useState([]);
@@ -49,7 +51,7 @@ export const Single_Product = () => {
                     </div>
                     <div className='operation-buttons'>
                         <button className='op-button' onClick={() => wishlistDispatch({ type: 'ADD_TO_WISHLIST', payload: showItem[0] })}>Add to Wishlist</button>
-                        <button className='op-button' >Add to Cart</button>
+                        <button className='op-button' onClick={() => cartDispatch({ type: 'ADD_TO_CART', payload: showItem[0] })}>Add to Cart</button>
                     </div>
                 </div>
 

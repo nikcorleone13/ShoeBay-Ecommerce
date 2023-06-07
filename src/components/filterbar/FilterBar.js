@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./filterbar.css"
+
+import { ProductsDataContext } from '../../contexts/ProductsContext';
 
 export const FilterBar = () => {
     const [rangeValue, setRangeValue] = useState(100);
@@ -7,6 +9,7 @@ export const FilterBar = () => {
     const [ratingBox, setRatingBox] = useState({ above1: false, above2: false, above3: false, above4: false, });
     const [sortBox, setSortBox] = useState({ lowTohigh: false, highToLow: false });
 
+    const { dispatch, data } = useContext(ProductsDataContext);
     // handle rangebar input
     const handleRange = (e) => {
         setRangeValue(e.target.value);
@@ -14,6 +17,7 @@ export const FilterBar = () => {
 
     // RESETTING ALL FILTERS
     const resetFilters = () => {
+        dispatch({ type: "INITIAL_API_DATA", payload: data })
         setRangeValue(100);
         setCategoryBox({ checkbox1: false, checkbox2: false, checkbox3: false });
         setRatingBox({ above1: false, above2: false, above3: false, above4: false, });
@@ -24,7 +28,7 @@ export const FilterBar = () => {
 
             <div className='filter-container'>
 
-                <p className='reset-filters' onClick={resetFilters}>Reset Filters</p>
+                <p className='reset-filters' onClick={() => resetFilters}>Reset Filters</p>
 
                 <div className='range-filter' >
                     <p>Price</p>
@@ -36,7 +40,7 @@ export const FilterBar = () => {
                         max="30000" />
                 </div>
 
-                <div className='category-filter' >
+                {/* <div className='category-filter' >
                     <p>Category</p>
 
                     <div className='input-wrapper'>
@@ -58,7 +62,7 @@ export const FilterBar = () => {
                         </div>
                     </div>
 
-                </div>
+                </div> */}
 
                 <div className='ratings-filter'>
                     <p>Ratings</p>
@@ -101,7 +105,7 @@ export const FilterBar = () => {
                     </div>
                     <label>High-to-Low</label>
                     <input type='checkbox' checked={sortBox.highToLow}
-                        onChange={() => setSortBox({ ...sortBox, highToLow: !sortBox.highToLow })} />
+                        onChange={() => setSortBox({ ...sortBox, highToLow: !sortBox.highToLow })} onClick={dispatch({ type: "HTL", payload: data })} />
                     <div>
 
                     </div>

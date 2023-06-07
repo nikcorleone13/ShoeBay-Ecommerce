@@ -1,12 +1,17 @@
 import React, { useContext, useEffect } from 'react'
 import { WishlistContext } from '../../contexts/WishlistContext'
 import { Header } from '../../components/navbar/Navbar';
+import { CartContext } from '../../contexts/CartContext';
+import { Link } from 'react-router-dom';
+import { Products } from '../products_page/Products_Page';
+import { ButtonPrimary } from '../../components/buttons/primary/Button_Primary';
 
 
 
 export const Wishlist = () => {
 
     const { wishlistDispatch, wishlistData } = useContext(WishlistContext);
+    const { cartDispatch, cart } = useContext(CartContext);
     console.log("wishlist page data", wishlistData)
 
     useEffect(() => {
@@ -38,7 +43,7 @@ export const Wishlist = () => {
                                         </div>
                                         <div className='operation-buttons'>
                                             <button className='op-button' onClick={() => wishlistDispatch({ type: 'REMOVE_FROM_WISHLIST', payload: item._id })}>Remove from Wishlist</button>
-                                            <button className='op-button' >Add to Cart</button>
+                                            <button className='op-button' onClick={() => cartDispatch({ type: 'ADD_TO_CART', payload: item })}>Add to Cart</button>
                                         </div>
                                     </div>
 

@@ -3,19 +3,22 @@ import axios from 'axios';
 
 import { Header } from '../../components/navbar/Navbar';
 import { FilterBar } from '../../components/filterbar/FilterBar';
-import "./productsPage.css";
 import { Footer } from '../../components/footer/Footer';
 import { getProductsAPI } from '../../apiHelpers/apiHelpers';
 import { ProductsDataContext } from '../../contexts/ProductsContext';
 import reducerFunction from '../../reducer/filterReducer';
 import { ProductCard } from '../../components/productCard/ProductCard';
 import { Loader } from '../../components/loadingScreen/Loader';
+import { useParams } from 'react-router-dom';
 
-export const Products = () => {
+export const ProdCategory = () => {
     const [loading, setLoading] = useState(true);
     const [allData, setAllData] = useState([]);
     const [show, setShow] = useState([]);
     const { data, dispatch } = useContext(ProductsDataContext);
+
+    const { category } = useParams();
+    console.log("cate", category);
 
     useEffect(() => {
         console.log('DATA', data);
@@ -24,7 +27,7 @@ export const Products = () => {
             setShow(data.filter_Data);
         }
         setLoading(false);
-    }, [data, allData]);
+    }, [data]);
 
     return (
         <div>
